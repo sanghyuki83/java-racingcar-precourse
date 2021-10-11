@@ -1,24 +1,28 @@
 package racinggame;
 
 public class Car {
-    private final String name;
-    private int moved;
+    private final Racer name;
+    private MoveCount moved;
 
     public Car(String name) {
-        this.name = name;
-        this.moved = 0;
+        this.name = new Racer(name);
+        this.moved = new MoveCount();
     }
 
     public String getName() {
-        return this.name;
+        return this.name.getName();
     }
 
     public void go(int no) {
-        if (no > 3)
-            this.moved++;
+        if (isMoveable(no))
+            this.moved.increase();
+    }
+
+    private boolean isMoveable(int no) {
+        return no > MINIMUN.NUMBER;
     }
 
     public int getDistance() {
-        return this.moved;
+        return this.moved.getCount();
     }
 }
