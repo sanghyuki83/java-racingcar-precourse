@@ -1,21 +1,16 @@
 package racinggame;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Race {
-    private final List<Car> carList;
-    private final List<String> winnerList;
-    private final Map<String, Integer> racerNumber;
-
-
+    private final Cars carList;
+    private final Winners winnerList;
+    private final RacerNumber racerNumber;
 
     private Race(){
-        carList = new ArrayList<>();
-        racerNumber = new HashMap<>();
-        winnerList = new ArrayList<>();
+        carList = new Cars();
+        racerNumber = new RacerNumber();
+        winnerList = new Winners();
     }
 
     public Race(List<String> racers) {
@@ -42,7 +37,7 @@ public class Race {
         return carList.get(racerNumber.get(racer));
     }
 
-    public List<String> getWinners() {
+    public Winners getWinners() {
         int max = setMaxDistance();
         winnerList.clear();
         for (Car car : carList){
