@@ -26,4 +26,12 @@ public class CarTest {
         car.go(9);
         assertThat(car.getDistance()).isEqualTo(2);
     }
+
+    @Test
+    void 출력테스트() {
+        car.go(3);
+        assertThat(car.getState()).isEqualTo("test :");
+        car.go(4);
+        assertThat(car.getState()).isEqualTo("test : -");
+    }
 }

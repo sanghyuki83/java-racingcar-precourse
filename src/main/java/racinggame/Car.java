@@ -25,4 +25,14 @@ public class Car {
     public int getDistance() {
         return this.moved.getCount();
     }
+
+    public String getState() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(name.getName());
+        sb.append(" : ");
+        for(int i = 0; i < getDistance(); i++){
+            sb.append("-");
+        }
+        return sb.toString().trim();
+    }
 }
