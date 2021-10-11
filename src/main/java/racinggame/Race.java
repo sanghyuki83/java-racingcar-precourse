@@ -59,4 +59,8 @@ public class Race {
         }
         return max;
     }
+
+    public Cars getCars() {
+        return carList;
+    }
 }

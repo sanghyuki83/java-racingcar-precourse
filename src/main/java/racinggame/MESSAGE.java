@@ -5,4 +5,5 @@ public class MESSAGE {
     public static final String INVAILD_NAME_MESSAGE = "[ERROR] 이름은 1 ~ 5 글자만 가능합니다";
     public static final String INPUT_NUMBER_MESSAGE = "시도할 회수는 몇회인가요?";
     public static final String INVALID_NUMBER_MESSAGE = "[ERROR] 숫자를 입력하세요";
+    public static final String EXECUTION_MESSAGE = "실행 결과";
 }

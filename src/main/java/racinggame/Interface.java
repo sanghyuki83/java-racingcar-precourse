@@ -1,6 +1,7 @@
 package racinggame;
 
 import nextstep.utils.Console;
+import nextstep.utils.Randoms;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -78,5 +79,24 @@ public class Interface {
             return false;
         }
         return true;
+    }
+
+    public void printRunningMessage() {
+        System.out.println(MESSAGE.EXECUTION_MESSAGE);
+    }
+
+    public List<Integer> getOperation(int num) {
+        List<Integer> opers = new ArrayList<>();
+        while (num-- > 0){
+            opers.add(Randoms.pickNumberInRange(0, 9));
+        }
+        return opers;
+    }
+
+    public void printStatus(Race race) {
+        for (Car car : race.getCars()){
+            System.out.println(car.getState());
+        }
+        System.out.println();
     }
 }
