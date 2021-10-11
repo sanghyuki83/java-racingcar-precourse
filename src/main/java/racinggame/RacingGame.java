@@ -1,7 +1,5 @@
 package racinggame;
 
-import java.util.List;
-
 public class RacingGame {
     private static final RacingGame game = new RacingGame();
     private static final Interface io = Interface.getInstance();
@@ -13,5 +11,6 @@ public class RacingGame {
     public void gameStart(){
         Racers racers = io.getPlayers();
         Race race = new Race (racers);
+        int planCount = io.getPlayCount();
     }
 }

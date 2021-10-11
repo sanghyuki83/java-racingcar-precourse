@@ -22,7 +22,6 @@ public class Interface {
             racers = makeList(Console.readLine());
         }
         return new Racers(racers);
-
     }
 
     private boolean checkValid(List<String> racers) {
@@ -51,5 +50,33 @@ public class Interface {
 
     private void printInvaildNameMessage() {
         System.out.println(MESSAGE.INVAILD_NAME_MESSAGE);
+    }
+
+    public int getPlayCount() {
+        printInputNumberMessage();
+        String input = Console.readLine();
+        while (!isNumber(input)){
+            printInvalidNumberMessage();
+            printInputNumberMessage();
+            input = Console.readLine();
+        }
+        return Integer.parseInt(input);
+    }
+
+    private void printInputNumberMessage() {
+        System.out.println(MESSAGE.INPUT_NUMBER_MESSAGE);
+    }
+
+    private void printInvalidNumberMessage() {
+        System.out.println(MESSAGE.INVALID_NUMBER_MESSAGE);
+    }
+
+    private boolean isNumber(String input) {
+        try {
+            Integer.parseInt(input);
+        }catch (NumberFormatException e) {
+            return false;
+        }
+        return true;
     }
 }
