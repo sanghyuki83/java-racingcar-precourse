@@ -4,8 +4,8 @@ public class Car {
     private final Racer name;
     private MoveCount moved;
 
-    public Car(String name) {
-        this.name = new Racer(name);
+    public Car(Racer racer) {
+        this.name = racer;
         this.moved = new MoveCount();
     }
 

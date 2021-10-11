@@ -11,6 +11,7 @@ public class RacingGame {
     public static RacingGame getInstance() { return game; }
 
     public void gameStart(){
-        List<String> racers = io.getPlayers();
+        Racers racers = io.getPlayers();
+        Race race = new Race (racers);
     }
 }

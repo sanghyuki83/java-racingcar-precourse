@@ -9,7 +9,7 @@ public class CarTest {
     private Car car;
     @BeforeEach
     void setUp() {
-        car = new Car("test");
+        car = new Car(new Racer("test"));
     }
 
     @Test

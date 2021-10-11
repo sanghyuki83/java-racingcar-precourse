@@ -13,12 +13,12 @@ public class Race {
         winnerList = new Winners();
     }
 
-    public Race(List<String> racers) {
+    public Race(Racers racers) {
         this();
 
         int sequence = 0;
-        for(String racer : racers ){
-            racerNumber.put(racer, sequence++);
+        for(Racer racer : racers ){
+            racerNumber.put(racer.getName(), sequence++);
             carList.add(new Car(racer));
         }
     }

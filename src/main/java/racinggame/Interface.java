@@ -13,7 +13,7 @@ public class Interface {
 
     public static Interface getInstance() { return io; }
 
-    public List<String> getPlayers() {
+    public Racers getPlayers() {
         printStartMessage();
         List<String> racers = makeList(Console.readLine());
         while (!checkValid(racers)){
@@ -21,7 +21,7 @@ public class Interface {
             printStartMessage();
             racers = makeList(Console.readLine());
         }
-        return racers;
+        return new Racers(racers);
 
     }
 
