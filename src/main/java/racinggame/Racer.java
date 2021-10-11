@@ -7,6 +7,10 @@ public class Racer {
         this.name = name;
     }
 
+    public static boolean isValidName(String racer) {
+        return racer.length() > 0 && racer.length() < 6;
+    }
+
     public String getName() {
         return this.name;
     }
