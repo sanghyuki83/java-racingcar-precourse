@@ -30,7 +30,7 @@ public class CarTest {
     @Test
     void 출력테스트() {
         car.go(3);
-        assertThat(car.getState()).isEqualTo("test :");
+        assertThat(car.getState()).isEqualTo("test : ");
         car.go(4);
         assertThat(car.getState()).isEqualTo("test : -");
     }

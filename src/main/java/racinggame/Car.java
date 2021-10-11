@@ -33,6 +33,6 @@ public class Car {
         for(int i = 0; i < getDistance(); i++){
             sb.append("-");
         }
-        return sb.toString().trim();
+        return sb.toString();
     }
 }

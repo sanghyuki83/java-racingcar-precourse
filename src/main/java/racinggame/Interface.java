@@ -99,4 +99,12 @@ public class Interface {
         }
         System.out.println();
     }
+
+    public void printResult(Winners winners) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("최종 우승자는 ");
+        sb.append(winners.getWinners());
+        sb.append(" 입니다.");
+        System.out.println(sb.toString());
+    }
 }

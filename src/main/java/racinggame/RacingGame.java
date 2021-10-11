@@ -14,6 +14,7 @@ public class RacingGame {
         int planCount = io.getPlayCount();
 
         playGame(race, planCount);
+        io.printResult(race.getWinners());
     }
 
 
