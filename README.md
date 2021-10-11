@@ -5,3 +5,10 @@
 
 ## 과제 제출 과정
 * [과제 제출 방법](https://github.com/next-step/nextstep-docs/tree/master/precourse)
+
+## 기능정의
+* 자동차
+    * 이름을 갖는다
+    * 입력값이 4이상이면 이동한다
+    * 현재 이동 횟수를 반환한다
+    
