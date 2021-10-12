@@ -18,13 +18,13 @@ public class RaceTest {
     @Test
     void 자동차이동테스트() {
         Race race = new Race(new Racers(Arrays.asList("pobi","crong")));
-        race.play(Arrays.asList(5,2));
+        race.play(new Operations(Arrays.asList(5,2)));
         assertThat(race.getCar("pobi").getDistance()).isEqualTo(1);
         assertThat(race.getCar("crong").getDistance()).isEqualTo(0);
-        race.play(Arrays.asList(3,2));
+        race.play(new Operations(Arrays.asList(3,2)));
         assertThat(race.getCar("pobi").getDistance()).isEqualTo(1);
         assertThat(race.getCar("crong").getDistance()).isEqualTo(0);
-        race.play(Arrays.asList(9,9));
+        race.play(new Operations(Arrays.asList(9,9)));
         assertThat(race.getCar("pobi").getDistance()).isEqualTo(2);
         assertThat(race.getCar("crong").getDistance()).isEqualTo(1);
     }
@@ -32,14 +32,14 @@ public class RaceTest {
     @Test
     void 우승자확인테스트() {
         Race race = new Race(new Racers(Arrays.asList("pobi","crong")));
-        race.play(Arrays.asList(5,2));
-        race.play(Arrays.asList(3,2));
-        race.play(Arrays.asList(9,9));
+        race.play(new Operations(Arrays.asList(5,2)));
+        race.play(new Operations(Arrays.asList(3,2)));
+        race.play(new Operations(Arrays.asList(9,9)));
         assertThat(race.getWinners().get(0)).isEqualTo("pobi");
-        race.play(Arrays.asList(1,9));
+        race.play(new Operations(Arrays.asList(1,9)));
         assertThat(race.getWinners().get(0)).isEqualTo("pobi");
         assertThat(race.getWinners().get(1)).isEqualTo("crong");
-        race.play(Arrays.asList(1,9));
+        race.play(new Operations(Arrays.asList(1,9)));
         assertThat(race.getWinners().get(0)).isEqualTo("crong");
 
     }

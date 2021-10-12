@@ -85,8 +85,8 @@ public class Interface {
         System.out.println(MESSAGE.EXECUTION_MESSAGE);
     }
 
-    public List<Integer> getOperation(int num) {
-        List<Integer> opers = new ArrayList<>();
+    public Operations getOperation(int num) {
+        Operations opers = new Operations();
         while (num-- > 0){
             opers.add(Randoms.pickNumberInRange(0, 9));
         }

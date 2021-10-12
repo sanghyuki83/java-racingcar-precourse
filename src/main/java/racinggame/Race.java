@@ -27,9 +27,9 @@ public class Race {
         return carList.size();
     }
 
-    public void play(List<Integer> numbers) {
-        for(int i = 0; i < numbers.size(); i++){
-            carList.get(i).go(numbers.get(i));
+    public void play(Operations opers) {
+        for(int i = 0; i < opers.size(); i++){
+            carList.get(i).go(opers.get(i));
         }
     }
 
