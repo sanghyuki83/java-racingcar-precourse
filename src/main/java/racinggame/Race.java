@@ -1,7 +1,5 @@
 package racinggame;
 
-import java.util.List;
-
 public class Race {
     private final Cars carList;
     private final Winners winnerList;
@@ -17,7 +15,7 @@ public class Race {
         this();
 
         int sequence = 0;
-        for(Racer racer : racers ){
+        for (Racer racer : racers ){
             racerNumber.put(racer.getName(), sequence++);
             carList.add(new Car(racer));
         }
@@ -28,7 +26,7 @@ public class Race {
     }
 
     public void play(Operations opers) {
-        for(int i = 0; i < opers.size(); i++){
+        for (int i = 0; i < opers.size(); i++){
             carList.get(i).go(opers.get(i));
         }
     }
@@ -47,7 +45,7 @@ public class Race {
     }
 
     private void setWinner(int max, Car car) {
-        if(car.getDistance() == max) {
+        if (car.getDistance() == max) {
             winnerList.add(car.getName());
         }
     }

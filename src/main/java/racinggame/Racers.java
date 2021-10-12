@@ -11,7 +11,7 @@ public class Racers  implements Iterable<Racer> {
 
     public Racers(List<String> list) {
         this.list = new ArrayList<>();
-        for(String name : list){
+        for (String name : list){
             this.list.add(new Racer(name));
         }
     }

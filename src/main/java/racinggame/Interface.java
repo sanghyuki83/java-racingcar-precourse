@@ -26,8 +26,9 @@ public class Interface {
     }
 
     private boolean checkValid(List<String> racers) {
-        if (racers.size() == 0)
+        if (racers.size() == 0) {
             return false;
+        }
 
         boolean result = true;
         for (String racer : racers){

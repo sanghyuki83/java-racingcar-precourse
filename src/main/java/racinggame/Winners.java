@@ -23,10 +23,10 @@ public class Winners {
     }
 
     public String getWinners(){
-        if(list.size() == 0) {
+        if (list.size() == 0) {
             return "";
         }
-        if(list.size() == 1) {
+        if (list.size() == 1) {
             return list.get(0);
         }
         return makeList();
